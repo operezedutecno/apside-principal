@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-container>
+      <apside-list :url="url" :titles="titles"></apside-list>
+    </v-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
+  data() {
+    return {
+      url: "https://jsonplaceholder.typicode.com/users",
+      titles: [
+        { text: 'Id', value: 'id'},
+        { text: 'Nombre', value: 'name'},
+        { text: 'Correo electrónico', value: 'email'},
+        { text: 'Usuario', value: 'username' }
+      ]
+    }
+  },
   components: {
-    HelloWorld
   }
 }
 </script>
