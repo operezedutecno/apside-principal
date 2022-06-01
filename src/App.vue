@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-container>
-      <apside-list :url="url" :titles="titles"></apside-list>
+      <apside-list title="Listado de Usuarios" :url="url" :titles="titles"></apside-list>
     </v-container>
   </div>
 </template>
@@ -15,8 +15,7 @@ export default {
       titles: [
         { text: 'Id', value: 'id'},
         { text: 'Nombre', value: 'name'},
-        { text: 'Correo electrónico', value: 'email'},
-        { text: 'Usuario', value: 'username' }
+        { text: 'Página Web', value: 'website'},
       ]
     }
   },
